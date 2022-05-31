@@ -64,7 +64,7 @@ function docker_compose_setup() {
   command -v docker-compose >/dev/null 2>&1 || { echo >&2 "OpenDataCam requires docker-compose, please install and retry"; }
 
   # Get the docker compose file
-  wget -N https://raw.githubusercontent.com/opendatacam/opendatacam/$VERSION/docker/run/$PLATFORM/docker-compose.yml
+  wget -N https://raw.githubusercontent.com/Snick32/opendatacam/$VERSION/docker/run/$PLATFORM/docker-compose.yml
 
   echo "Download, install and run opendatacam docker container"
   sudo docker-compose up -d
