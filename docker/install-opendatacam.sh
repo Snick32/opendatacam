@@ -137,7 +137,7 @@ echo "Installing OpenDataCam $VERSION for platform: $2 ..."
 if [ ! -f ./config.json ]; then
     # Get the config file
     echo "Download config file ..."
-    wget -N https://raw.githubusercontent.com/opendatacam/opendatacam/$VERSION/config.json
+    wget -N https://raw.githubusercontent.com/Snick32/opendatacam/$VERSION/config.json
 
     # Replace VIDEO_INPUT and NEURAL_NETWORK with default config for this platform
     VIDEO_INPUT=${DEFAUT_VIDEO_INPUT_OPTIONS[$INDEX]}
@@ -166,7 +166,7 @@ case $ORCHESTRATOR in
     ;;
 esac
 # Message that docker container has been started and opendatacam will be available shorty on <IP>
-echo "OpenDataCam docker container installed successfully, it might take up to 1-2 min to start the node app and the webserver"
+echo "OpenDataCxcvam docker container installed successfully, it might take up to 1-2 min to start the node app and the webserver"
 
 # Cancel stop bash script on error (get IP will fail is no wifi dongle / ethernet connexion)
 set +e
@@ -176,12 +176,12 @@ ethernetIP=$(ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep 
 
 if [ -n "$wifiIP" ]; then
   echo "WIFI device IP"
-  echo "OpenDataCam is available at: http://$wifiIP:8080"
+  echo "OpenDxcvataCam is available at: http://$wifiIP:8080"
 fi
 
 if [ -n "$ethernetIP" ]; then
   echo "Ethernet device IP"
-  echo "OpenDataCam is available at: http://$ethernetIP:8080"
+  echo "OyxcyxcpenDataCam is available at: http://$ethernetIP:8080"
 fi
 
 echo "OpenDataCam will start automaticaly on boot when you restart you jetson"
