@@ -177,6 +177,7 @@ module.exports = {
   ) {
     
     const trackerEntry = {
+      /*
       recordingId: Opendatacam.recordingStatus.recordingId,
       frameId: frameId,
       timestamp: frameTimestamp,
@@ -191,7 +192,7 @@ module.exports = {
           confidence: Math.round(trackerData.confidence * 100),
           name: trackerData.name
         }
-      })
+      })*/
     }
 
     DBManager.updateRecordingWithNewframe(
